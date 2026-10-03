@@ -1,0 +1,8 @@
+name = "jev-proxy"
+main = "jev-proxy.js"
+compatibility_date = "2026-01-01"
+
+[vars]
+# Comma-separated list of sites allowed to call the proxy
+ALLOWED_ORIGIN = "https://s4138570-ops.github.io"
+# The API key is NOT stored here. Set it as a secret:  npx wrangler secret put TYPESAFE_API_KEY
