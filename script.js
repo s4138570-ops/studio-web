@@ -1,3 +1,6 @@
+// Screen index is hidden by default; add ?screens to the URL to show it (design review)
+if (new URLSearchParams(location.search).has('screens')) document.body.classList.add('show-screens');
+
 const screens = [...document.querySelectorAll('.screen')];
 const phone = document.getElementById('app');
 const jump = document.getElementById('jump');
