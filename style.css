@@ -1,0 +1,107 @@
+/* Tokens from the Figma wireframe "Wireframes — Web (dark)" */
+:root{
+  --bg:#12121a; --card:#1e1e29; --ph:#2c2c3a; --primary:#3d3d50;
+  --fg:#dadae6; --muted:#9a9aae;
+}
+*{box-sizing:border-box}
+html{background:#0a0a10}
+body{margin:0;font-family:'Manrope',system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  font-weight:500;color:var(--fg);line-height:1.4;font-size:13px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;border:0;cursor:pointer}
+
+/* phone column */
+.phone{width:100%;max-width:393px;min-height:100vh;margin:0 auto;background:var(--bg);position:relative}
+.screen{display:none;flex-direction:column;gap:16px;padding:24px 20px 40px;min-height:100vh;animation:in .18s ease-out}
+.screen.active{display:flex}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* type */
+h1{margin:0;font-size:20px;font-weight:800;line-height:1.4}
+h2{margin:0;font-size:15px;font-weight:800}
+p{margin:0}
+.eyebrow{font-size:10px;font-weight:800;color:var(--muted);letter-spacing:.02em}
+.eyebrow.q{font-size:11px}
+.meta{font-size:11px;color:var(--muted)}
+.lead{font-size:12px}
+.note{font-size:10px;color:var(--muted)}
+
+/* placeholders */
+.ph{background:var(--ph);border-radius:10px;width:100%}
+.hero{height:170px}
+.urlbar{display:flex;align-items:center;gap:8px;background:var(--card);border-radius:10px;padding:14px 12px;font-size:10px;color:var(--muted)}
+.sq{width:12px;height:12px;border-radius:3px;background:var(--ph);display:inline-block}
+.lines{display:flex;flex-direction:column;gap:16px}
+.lines i{display:block;height:10px;border-radius:5px;background:var(--ph)}
+.lines i.short{width:62%}
+
+/* buttons & cards */
+.btn{display:block;width:100%;text-align:center;background:var(--card);color:var(--muted);
+  padding:15px 16px;border-radius:12px;font-size:13px;font-weight:500;transition:filter .15s}
+.btn.primary{background:var(--primary);color:var(--fg);font-weight:800}
+.btn:hover,.card.item:hover,.choice:hover{filter:brightness(1.18)}
+.btn:active{transform:scale(.99)}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid #8a8aff;outline-offset:2px}
+.card{background:var(--card);border-radius:12px}
+.pad{padding:16px;display:flex;flex-direction:column;gap:10px}
+.card.item{display:flex;align-items:center;gap:12px;padding:16px 12px}
+.card.item div{flex:1;min-width:0}
+.card.item b{display:block;font-size:13px;font-weight:800;color:var(--fg)}
+.card.item small{display:block;font-size:11px;color:var(--muted)}
+.thumb{width:40px;height:40px;flex:none;border-radius:10px}
+.chev{width:8px;height:8px;border-right:2px solid var(--muted);border-top:2px solid var(--muted);transform:rotate(45deg)}
+.choice{display:flex;flex-direction:column;gap:10px;padding:16px}
+.choice .lines{gap:10px;margin-top:4px}
+.btn.row.lang{text-align:left;padding:30px 14px;font-weight:800;color:var(--fg)}
+blockquote{margin:0;font-size:12px;font-style:italic;color:var(--fg)}
+.switch{text-align:center;font-size:11px;color:var(--muted);text-decoration:underline}
+
+/* header */
+.top{display:flex;align-items:center;gap:10px;min-height:36px}
+.top b{font-size:13px;font-weight:800;flex:1}
+.top small{font-size:11px;color:var(--muted)}
+.top .dot{width:16px;height:16px;border-radius:4px;background:var(--ph);order:1}
+.top .back{width:30px;height:30px;border-radius:8px;background:var(--card);position:relative;flex:none;order:0}
+.top .back::after{content:"";position:absolute;left:11px;top:10px;width:8px;height:8px;border-left:2px solid var(--fg);border-bottom:2px solid var(--fg);transform:rotate(45deg)}
+.top b{order:2}.top small{order:3}
+
+/* language switch */
+.langs{display:flex;gap:14px;margin-top:auto;padding-top:24px;font-size:10px;color:var(--muted)}
+.langs a.on{color:var(--fg)}
+
+/* find it */
+.find .btn{margin-top:6px}
+.reveal{font-size:11px;color:var(--muted);border-left:2px solid var(--primary);padding-left:10px}
+
+/* AR */
+.ar-controls{display:flex;gap:14px;justify-content:center}
+.sq-btn{width:46px;height:46px;display:block;border-radius:12px}
+
+/* map sheet */
+.sheet{position:relative;padding-top:24px}
+.grab{position:absolute;top:10px;left:50%;width:40px;height:4px;margin-left:-20px;border-radius:2px;background:var(--ph)}
+
+/* countdown */
+.count{display:flex;gap:10px}
+.count span{background:var(--ph);border-radius:10px;width:62px;height:52px;display:flex;align-items:center;justify-content:center;gap:2px;font-size:11px;color:var(--muted)}
+.count b{font-size:18px;color:var(--fg);font-variant-numeric:tabular-nums}
+
+/* stamps */
+.stamps{display:flex;gap:10px;flex-wrap:wrap}
+.stamps button{width:34px;height:34px;border-radius:9px;background:var(--card);border:1px solid var(--ph)}
+.stamps button.on{background:var(--primary);border-color:#6a6a86}
+
+/* wide screens: show the phone in a frame + screen index like the wireframe board */
+.jump{display:none}
+@media(min-width:900px){
+  body{display:flex;justify-content:center;gap:48px;padding:32px 24px}
+  .phone{margin:0;min-height:852px;height:852px;border-radius:28px;overflow-y:auto;box-shadow:0 0 0 1px #24243a,0 30px 80px #0008;scrollbar-width:none}
+  .screen{min-height:100%}
+  .jump{display:block;width:230px;position:sticky;top:32px;align-self:flex-start;color:var(--muted);font-size:12px}
+  .jump h2{font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+  .jump ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+  .jump a{display:block;padding:6px 10px;border-radius:8px}
+  .jump a:hover{background:var(--card)}
+  .jump a.on{background:var(--primary);color:var(--fg)}
+}
+@media(prefers-reduced-motion:reduce){.screen{animation:none}}

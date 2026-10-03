@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chinatown Walk Melbourne</title>
+<meta name="description" content="A self-guided heritage walk through Melbourne's Chinatown. No download, no account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="jump" aria-label="Wireframe screens">
+  <h2>Screens</h2>
+  <ol id="jump"></ol>
+</aside>
+
+<div class="phone" id="app">
+
+  <!-- 01 Stop entry (QR landing) -->
+  <section class="screen" data-screen="1" data-title="Stop entry (QR landing)">
+    <div class="urlbar"><i class="sq"></i><span>chinatownwalk.melbourne · no download</span></div>
+    <div class="ph hero"></div>
+    <p class="eyebrow">STOP 3 OF 8</p>
+    <h1>Num Pon Soon Society</h1>
+    <p class="meta">200–202 Little Bourke Street · built 1861</p>
+    <p class="eyebrow q">How much time do you have?</p>
+    <a class="btn primary" href="#/5">Quick Look · 2 min</a>
+    <a class="btn" href="#/6">Full Story · 7 min</a>
+    <div class="langs"><a href="#/2" class="on">EN</a><a href="#/2">简体</a><a href="#/2">繁體</a></div>
+  </section>
+
+  <!-- 02 Language -->
+  <section class="screen" data-screen="2" data-title="Language (first load)">
+    <div class="ph" style="height:257px"></div>
+    <div class="card pad">
+      <h2>Choose your language</h2>
+      <p class="meta">语言 · 語言</p>
+      <a class="btn row lang" href="#/3" data-lang="en">English</a>
+      <a class="btn row lang" href="#/3" data-lang="zh-Hans">简体中文</a>
+      <a class="btn row lang" href="#/3" data-lang="zh-Hant">繁體中文</a>
+    </div>
+    <p class="note">No account needed. Nothing is stored.</p>
+  </section>
+
+  <!-- 03 Intro & about -->
+  <section class="screen" data-screen="3" data-title="Intro &amp; about">
+    <div class="urlbar"><i class="sq"></i><span>chinatownwalk.melbourne · no download</span></div>
+    <div class="ph" style="height:142px"></div>
+    <h1>Little Bourke Street, 1850s to now</h1>
+    <div class="lines"><i></i><i></i><i></i><i class="short"></i></div>
+    <a class="btn primary" href="#/4">Start at the nearest stop</a>
+    <a class="btn" href="#/9">Show me the map</a>
+    <p class="eyebrow">TONIGHT · MID-AUTUMN</p>
+    <a class="card item" href="#/11">
+      <i class="ph thumb"></i>
+      <div><b>Lantern projection · 8pm</b><small>Sum Kum Lee facade</small></div>
+    </a>
+  </section>
+
+  <!-- 04 Depth choice -->
+  <section class="screen" data-screen="4" data-title="Depth choice">
+    <header class="top"><a class="back" href="#/3" aria-label="Back"></a><span class="dot"></span><b>Num Pon Soon</b><small>Stop 3 of 8</small></header>
+    <h1>How much time do you have?</h1>
+    <a class="card choice" href="#/5">
+      <h2>Quick Look</h2><p class="meta">2 minutes · one thing to find</p>
+      <div class="lines"><i></i><i class="short"></i></div>
+    </a>
+    <a class="card choice" href="#/6">
+      <h2>Full Story</h2><p class="meta">7 minutes · with sources</p>
+      <div class="lines"><i></i><i></i><i class="short"></i></div>
+    </a>
+    <p class="note">You can switch at any time. Neither one is the “real” version.</p>
+  </section>
+
+  <!-- 05 Stop — Quick Look -->
+  <section class="screen" data-screen="5" data-title="Stop — Quick Look">
+    <header class="top"><a class="back" href="#/4" aria-label="Back"></a><span class="dot"></span><b>Quick Look</b><small>2 min</small></header>
+    <div class="ph" style="height:180px"></div>
+    <h1>Look up at the top floor</h1>
+    <div class="lines"><i></i><i></i><i class="short"></i></div>
+    <div class="card pad find">
+      <p class="eyebrow">FIND IT</p>
+      <p>The columns are European. Something on the upper level is not. What is it?</p>
+      <button class="btn primary" id="found">I found it</button>
+      <p class="reveal" id="reveal" hidden>Nice spotting! Tap “Full Story” if you’d like the background.</p>
+    </div>
+    <a class="btn" href="#/10">Next stop · 90 m</a>
+    <a class="switch" href="#/6">Switch to Full Story</a>
+  </section>
+
+  <!-- 06 Stop — Full Story -->
+  <section class="screen" data-screen="6" data-title="Stop — Full Story">
+    <header class="top"><a class="back" href="#/4" aria-label="Back"></a><span class="dot"></span><b>Full Story</b><small>7 min</small></header>
+    <div class="ph" style="height:114px"></div>
+    <h1>A European building wearing two identities</h1>
+    <div class="lines"><i></i><i></i><i></i><i></i><i></i><i class="short"></i></div>
+    <blockquote class="card pad">“The columns share their pedestal detailing with Parliament House.”</blockquote>
+    <a class="card item" href="#/7"><div><b>3 sources</b><small>Heritage Victoria · SLV · PROV</small></div><span class="chev"></span></a>
+    <a class="btn primary" href="#/8">See it in AR</a>
+  </section>
+
+  <!-- 07 Sources -->
+  <section class="screen" data-screen="7" data-title="Sources">
+    <header class="top"><a class="back" href="#/6" aria-label="Back"></a><span class="dot"></span><b>Sources</b></header>
+    <p class="meta lead">Every claim on the previous screen can be checked.</p>
+    <a class="card item" href="#/7"><i class="ph thumb"></i><div><b>Victorian Heritage Database</b><small>Statement of significance, Num Pon Soon</small></div></a>
+    <a class="card item" href="#/7"><i class="ph thumb"></i><div><b>State Library Victoria</b><small>The Chinese Exchange, photograph, 1863</small></div></a>
+    <a class="card item" href="#/7"><i class="ph thumb"></i><div><b>Public Record Office Victoria</b><small>Anti-poll-tax petitions, 1856</small></div></a>
+    <a class="card item" href="#/7"><i class="ph thumb"></i><div><b>Australian Dictionary of Biography</b><small>Lowe Kong Meng, 1831–1888</small></div></a>
+    <p class="note">Opens in a new tab. We don’t track what you read.</p>
+  </section>
+
+  <!-- 08 AR view -->
+  <section class="screen" data-screen="8" data-title="AR view (Web AR)">
+    <div class="ph" style="height:430px"></div>
+    <p class="eyebrow">POINT AT THE BRICKWORK</p>
+    <div class="card pad">
+      <h2>The ghost sign, restored</h2>
+      <p class="meta">A painted advertisement from the 1890s, still faintly visible above the doorway.</p>
+    </div>
+    <div class="ar-controls">
+      <button class="ph sq-btn" aria-label="Previous"></button>
+      <button class="ph sq-btn" aria-label="Capture"></button>
+      <a class="ph sq-btn" href="#/6" aria-label="Close"></a>
+    </div>
+    <p class="note">Camera runs on your device. Nothing is uploaded.</p>
+  </section>
+
+  <!-- 09 Map -->
+  <section class="screen" data-screen="9" data-title="Map">
+    <div class="ph" style="height:470px"></div>
+    <div class="card pad sheet">
+      <i class="grab"></i>
+      <p class="eyebrow">Nearest stop</p>
+      <h2>Sum Kum Lee · 112–114</h2>
+      <p class="meta">70 m · about 1 minute walk</p>
+      <a class="btn primary" href="#/10">Take me there</a>
+    </div>
+    <p class="note">Route is step-free and pram accessible.</p>
+  </section>
+
+  <!-- 10 All stops -->
+  <section class="screen" data-screen="10" data-title="All stops">
+    <header class="top"><a class="back" href="#/3" aria-label="Back"></a><span class="dot"></span><b>All stops</b><small>8 stops · 40 min</small></header>
+    <p class="meta lead">Start anywhere. Each stop works on its own.</p>
+    <a class="card item" href="#/1"><i class="ph thumb"></i><div><b>1 · The arches</b><small>1976 · younger than they look</small></div></a>
+    <a class="card item" href="#/1"><i class="ph thumb"></i><div><b>2 · Sum Kum Lee</b><small>1887 · a merchant’s warehouse</small></div></a>
+    <a class="card item" href="#/1"><i class="ph thumb"></i><div><b>3 · Num Pon Soon</b><small>1861 · two identities</small></div></a>
+    <a class="card item" href="#/1"><i class="ph thumb"></i><div><b>4 · Cohen Place</b><small>The museum and the plaza</small></div></a>
+    <a class="card item" href="#/1"><i class="ph thumb"></i><div><b>5 · The furniture lanes</b><small>Where 175 workshops stood</small></div></a>
+  </section>
+
+  <!-- 11 Tonight — projection -->
+  <section class="screen" data-screen="11" data-title="Tonight — projection">
+    <header class="top"><a class="back" href="#/3" aria-label="Back"></a></header>
+    <div class="ph" style="height:130px"></div>
+    <p class="eyebrow">TONIGHT · MID-AUTUMN</p>
+    <h1>The street, projected</h1>
+    <p class="meta">8:00pm–10:00pm · Sum Kum Lee facade 112–114 Little Bourke Street</p>
+    <div class="lines"><i></i><i></i><i class="short"></i></div>
+    <div class="card pad">
+      <p class="eyebrow">STARTS IN</p>
+      <div class="count" id="count"><span><b id="c-h">--</b>h</span><span><b id="c-m">--</b>m</span><span><b id="c-s">--</b>s</span></div>
+    </div>
+    <button class="btn primary" id="remind">Remind me</button>
+    <p class="eyebrow">ALSO ON TONIGHT</p>
+    <a class="card item" href="#/12"><i class="ph thumb"></i><div><b>Lantern making</b><small>Chinatown Square · from 6pm</small></div></a>
+  </section>
+
+  <!-- 12 Stamps & progress -->
+  <section class="screen" data-screen="12" data-title="Stamps &amp; progress">
+    <header class="top"><a class="back" href="#/3" aria-label="Back"></a><span class="dot"></span><b>Your stamps</b></header>
+    <div class="stamps" id="stamps"></div>
+    <h1 id="stamp-count">3 collected</h1>
+    <p class="meta">That’s plenty. There’s no prize for finishing — come back another time if you like.</p>
+    <p class="eyebrow">NEAREST STATIONS</p>
+    <a class="card item" href="#/9"><i class="ph thumb"></i><div><b>Chinatown Square</b><small>Self-serve · 120 m</small></div></a>
+    <a class="card item" href="#/9"><i class="ph thumb"></i><div><b>Chinese Museum, Cohen Pl</b><small>Staffed until 4pm · 260 m</small></div></a>
+    <a class="card item" href="#/9"><i class="ph thumb"></i><div><b>Lantern workshop tent</b><small>Tonight only · 300 m</small></div></a>
+    <a class="btn" href="#/9">Show all on map</a>
+    <a class="switch" href="#/13">Take your walk home</a>
+  </section>
+
+  <!-- 13 Take home -->
+  <section class="screen" data-screen="13" data-title="Take home">
+    <header class="top"><a class="back" href="#/12" aria-label="Back"></a></header>
+    <p class="eyebrow">YOUR WALK</p>
+    <h1>Your Chinatown</h1>
+    <div class="ph" style="height:330px"></div>
+    <p class="meta">Made from the 3 stops you visited tonight.</p>
+    <button class="btn primary" id="save">Save image</button>
+    <button class="btn" id="share">Share</button>
+    <p class="note" id="home-note">Nothing was uploaded. This was made on your phone.</p>
+  </section>
+
+  <!-- 14 Offline -->
+  <section class="screen" data-screen="14" data-title="Offline / weak signal">
+    <header class="top"><a class="back" href="#/1" aria-label="Back"></a><span class="dot"></span><b>Num Pon Soon</b><small>Offline</small></header>
+    <div class="ph" style="width:64px;height:64px"></div>
+    <h1>You’re offline</h1>
+    <p class="meta">The festival crowd has saturated the mobile network. This is normal tonight.</p>
+    <div class="card pad"><p class="eyebrow">STILL WORKS</p><p>All 8 stops · text, images and audio were saved when you scanned the first marker.</p></div>
+    <div class="card pad"><p class="eyebrow">NEEDS A CONNECTION</p><p>AR view · source links · sharing</p></div>
+    <a class="btn primary" href="#/5">Keep walking</a>
+    <a class="btn" href="#/1">Try again</a>
+  </section>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
