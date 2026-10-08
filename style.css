@@ -86,9 +86,13 @@ blockquote{margin:0;font-style:italic;font-size:14px}
 .top .back{width:34px;height:34px;border-radius:50%;background:var(--card);border:2px solid var(--ink);position:relative;flex:none;order:0}
 .top .back::after{content:"";position:absolute;left:12px;top:10px;width:8px;height:8px;border-left:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg)}
 
-/* language switch */
-.langs{display:flex;gap:16px;margin-top:auto;padding-top:24px;font-size:13px;color:var(--muted)}
-.langs a.on{color:var(--red);font-weight:700;text-decoration:underline;text-underline-offset:4px}
+/* language picker (first screen): segmented control */
+.langpick{display:flex;flex-direction:column;gap:8px}
+.langs{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--ink);border-radius:999px;overflow:hidden;background:var(--card);box-shadow:3px 3px 0 var(--ink)}
+.langs a{padding:11px 6px;text-align:center;font-size:14px;font-weight:700;color:var(--ink);border-left:2px solid var(--ink)}
+.langs a:first-child{border-left:0}
+.langs a.on{background:var(--red);color:var(--paper)}
+.langs a:not(.on):hover{background:#FFF1CC}
 
 /* find it */
 .find .btn{margin-top:6px}
