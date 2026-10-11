@@ -70,6 +70,9 @@ window.I18N = {
   'The museum and the plaza': ['博物馆与广场', '博物館與廣場'],
   '5 · The furniture lanes': ['5 · 家具小巷', '5 · 家具小巷'],
   'Where 175 workshops stood': ['曾有 175 间作坊的地方', '曾有 175 間作坊的地方'],
+  '1872 · a Methodist mission church': ['1872 · 卫理公会的传教教堂', '1872 · 衛理公會的傳教教堂'],
+  '1921 · occupied by the Chinese Nationalist Club': ['1921 · 国民党俱乐部入驻', '1921 · 國民黨俱樂部進駐'],
+  'Chinese-occupied since 1862': ['自 1862 年起由华人使用', '自 1862 年起由華人使用'],
   // 11 tonight
   'The street, projected': ['投影中的街道', '投影中的街道'],
   '8:00pm–10:00pm · Sum Kum Lee facade 112–114 Little Bourke Street': ['晚上 8:00–10:00 · Sum Kum Lee 外墙,112–114 Little Bourke Street', '晚上 8:00–10:00 · Sum Kum Lee 外牆,112–114 Little Bourke Street'],

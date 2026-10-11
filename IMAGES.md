@@ -18,7 +18,8 @@ Use `.jpg`/`.webp` for photos, `.svg`/`.png` for illustrations. Keep each file u
 | `ar-view` | 08 | 706 × 860 | Camera preview / AR mock-up |
 | `map` | 09 | 706 × 940 | Map style or screenshot |
 
-Already drawn (SVG in `img/`, replace freely): `stamp-1…8.svg`, `header-street.svg`
+Already drawn (SVG in `img/`, replace freely): `stamp-1…8.svg` (one per stop; stops 6–8 are the Chinese Mission Church, Kuomintang Building and 212–220 Little Bourke Street),
+`motif-fan.svg`, `motif-lantern.svg`, `motif-noodle.svg` (festival motifs), `header-street.svg`
 (screens 02 & 03), `banner-tonight.svg` (11), `share-card.svg` (13), `offline.svg` (14).
 
 Palette: red `#C41E2A` · teal `#16303A` · green `#0A7A3C` · cream `#FBF1DC` · peach `#F8D9A8` ·
@@ -26,3 +27,5 @@ yellow `#F1EB7A` · orange `#F07A2E`. Fonts: Fraunces italic (headings), Noto Se
 
 Translations live in `i18n.js` (English → 简体, 繁體). Proper names are kept in English until
 official Chinese names are confirmed.
+
+Stops 6–8 are based on Victorian Heritage Database entries; confirm details against the originals before launch.
