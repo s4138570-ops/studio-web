@@ -16,7 +16,7 @@ Use `.jpg`/`.webp` for photos, `.svg`/`.png` for illustrations. Keep each file u
 | `full-hero` | 06 | 706 × 228 | Real photo or archive image |
 | `source-1` … `source-4` | 07 | 80 × 80 | Institution logos (check usage rules) |
 | `ar-view` | 08 | 706 × 860 | Camera preview / AR mock-up |
-| `map` | 09 | 706 × 940 | Map style or screenshot |
+| `map` | 09 | done | `map.jpg` = Google Maps screenshot, cropped and lightened. The numbered stop pins are links laid over it in `index.html` (screen 09); move a pin by editing its `left`/`top` %. Positions are estimates — check on site. |
 
 Already drawn (SVG in `img/`, replace freely): `stamp-1…8.svg` (one per stop; stops 6–8 are the Chinese Mission Church, Kuomintang Building and 212–220 Little Bourke Street),
 `motif-fan.svg`, `motif-lantern.svg`, `motif-noodle.svg` (festival motifs), `header-street.svg`

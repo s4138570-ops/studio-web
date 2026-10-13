@@ -128,6 +128,16 @@ window.I18N = {
   'Offline / weak signal': ['离线 / 信号弱', '離線 / 訊號弱'],
   // image descriptions
   'Poster: Explore Melbourne’s Chinatown Through Time. Mid-Autumn Moon Festival, September 25th, Little Bourke Street.': ['海报:探索墨尔本唐人街的时光。中秋节,9 月 25 日,Little Bourke Street。', '海報:探索墨爾本唐人街的時光。中秋節,9 月 25 日,Little Bourke Street。'],
+  'Map of Little Bourke Street in Chinatown with the eight stops marked': ['唐人街 Little Bourke Street 地图,标出了 8 个站点', '唐人街 Little Bourke Street 地圖,標出了 8 個站點'],
+  'Map data © Google · stop positions are approximate': ['地图数据 © Google · 站点位置为示意', '地圖數據 © Google · 站點位置為示意'],
+  'Stop 1: The arches': ['第 1 站:拱门', '第 1 站:拱門'],
+  'Stop 2: Sum Kum Lee': ['第 2 站:Sum Kum Lee', '第 2 站:Sum Kum Lee'],
+  'Stop 3: Num Pon Soon': ['第 3 站:Num Pon Soon', '第 3 站:Num Pon Soon'],
+  'Stop 4: Cohen Place': ['第 4 站:Cohen Place', '第 4 站:Cohen Place'],
+  'Stop 5: The furniture lanes': ['第 5 站:家具小巷', '第 5 站:家具小巷'],
+  'Stop 6: Chinese Mission Church': ['第 6 站:Chinese Mission Church', '第 6 站:Chinese Mission Church'],
+  'Stop 7: Kuomintang Building': ['第 7 站:Kuomintang Building', '第 7 站:Kuomintang Building'],
+  'Stop 8: 212–220 Little Bourke Street': ['第 8 站:212–220 Little Bourke Street', '第 8 站:212–220 Little Bourke Street'],
   // aria labels
   'Back': ['返回', '返回'], 'Capture': ['拍摄', '拍攝'], 'Close': ['关闭', '關閉'], 'Previous': ['上一个', '上一個'],
 };

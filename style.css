@@ -52,6 +52,13 @@ p{margin:0}
 .ph.poster:not(.thumb):has(img){border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);overflow:hidden;-webkit-mask:none;mask:none}
 .ph.poster img{height:auto}
 .ph.thumb img[src$="promo.jpg"]{object-position:50% 45%}
+/* map: screenshot base + numbered stop pins and street names laid over it (positions in %) */
+.ph.mapbox img{height:auto}
+.street{position:absolute;transform:translate(-50%,-50%);font:700 9px/1 var(--serif);letter-spacing:.05em;color:var(--ink);background:rgba(251,241,220,.88);padding:2px 5px;border-radius:3px;white-space:nowrap;pointer-events:none}
+.street.v{transform:translate(-50%,-50%) rotate(-90deg)}
+.pin{position:absolute;transform:translate(-50%,-50%);width:24px;height:24px;border-radius:50%;background:var(--red);color:var(--paper);border:2px solid var(--paper);box-shadow:0 0 0 1.5px var(--ink),2px 2px 0 var(--ink);display:flex;align-items:center;justify-content:center;font:700 12px/1 var(--serif)}
+.pin::before{content:"";position:absolute;inset:-7px}
+.pin.near{background:var(--green)}
 
 .urlbar{display:flex;align-items:center;gap:8px;background:var(--card);border:1.5px solid var(--ink);border-radius:999px;padding:10px 14px;font-size:11px;color:var(--muted)}
 .sq{width:12px;height:12px;border-radius:50%;background:var(--green);display:inline-block}
