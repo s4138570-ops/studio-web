@@ -138,6 +138,7 @@ blockquote{margin:0;font-style:italic;font-size:14px}
 .stamps button img{display:block;width:100%;height:100%;object-fit:contain;transition:filter .2s}
 .stamps button:not(.on) img{filter:grayscale(1) opacity(.4)}
 .stamps button.todo{border:2px dashed rgba(22,48,58,.35);cursor:default}
+.stamps button:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 5px)}
 
 /* wide screens: phone in a frame; screen index only with ?screens (design review) */
 .jump{display:none}

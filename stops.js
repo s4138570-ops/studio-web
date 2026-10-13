@@ -7,7 +7,7 @@ window.STOPS = {
     name: 'The arches',
     title: 'The Chinatown arches',
     meta: 'Little Bourke Street at Exhibition Street · 1970s',
-    img: null,
+    img: 'img/stop-1.jpg',
     alt: 'Red Chinese gateway with a tiled roof over Little Bourke Street',
     quick: {
       title: 'Look up at the roof',
@@ -35,7 +35,7 @@ window.STOPS = {
     name: 'Sum Kum Lee',
     title: 'Sum Kum Lee',
     meta: '112–114 Little Bourke Street · built 1887–88',
-    img: null,
+    img: 'img/stop-2.jpg',
     alt: 'Ornate cream three-storey facade with arched windows and balconies',
     quick: {
       title: 'A warehouse dressed to impress',
@@ -90,7 +90,7 @@ window.STOPS = {
     name: 'Cohen Place',
     title: 'Cohen Place and the Chinese Museum',
     meta: '22 Cohen Place · built 1890',
-    img: null,
+    img: 'img/stop-4.jpg',
     alt: 'Red-brick museum entrance guarded by two white stone lions',
     quick: {
       title: 'Two lions at the door',

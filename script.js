@@ -236,7 +236,7 @@ remind.addEventListener('click', () => {
 
 /* ---------- 12 stamps: the team's stamp art, first 3 collected, tap to toggle ---------- */
 // null = stamp not designed yet: shown as an empty slot
-const STAMP_ART = ['img/stamp-1.webp', 'img/stamp-2.webp', 'img/stamp-3.webp', 'img/stamp-4.webp', 'img/stamp-5.webp', null, null, null];
+const STAMP_ART = ['img/stamp-1.webp', 'img/stamp-2.webp', 'img/stamp-3.webp', 'img/stamp-4.webp', 'img/stamp-5.webp', 'img/stamp-6.webp', 'img/stamp-7.webp'];
 const stamps = document.getElementById('stamps');
 const count = document.getElementById('stamp-count');
 STAMP_ART.forEach((src, i) => {

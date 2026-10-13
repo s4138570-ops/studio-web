@@ -19,10 +19,10 @@ shows the empty image slot.
 
 | Stop | File | Status | Credit (fill in) |
 |---|---|---|---|
-| 1 The arches | `stop-1.jpg` | **waiting**: the Exhibition Street arch photo | ? |
-| 2 Sum Kum Lee | `stop-2.jpg` | **waiting**: the Shanghai Village facade photo | ? |
+| 1 The arches | `stop-1.jpg` | done | ? |
+| 2 Sum Kum Lee | `stop-2.jpg` | done | ? |
 | 3 Num Pon Soon | `stop-3.jpg` | done | ? (looks like a heritage-survey slide) |
-| 4 Cohen Place | `stop-4.jpg` | **waiting**: the Chinese Museum entrance with the lions | ? |
+| 4 Cohen Place | `stop-4.jpg` | done | ? |
 | 5 The furniture lanes | `stop-5.jpg` | done | Australasian Sketcher, April 1880 (shown on the page) |
 | 6 Chinese Mission Church | `stop-6.jpg` | done | ? |
 | 7 Kuomintang Building | `stop-7.jpg` | done | ? |
@@ -34,7 +34,7 @@ Before a public launch, confirm the source and permission of every photo and add
 ## Stamps
 
 The team's stamp art is in `img/stamp-1.webp` … (white background removed, 480 px wide). The order and
-the list of files are set by `STAMP_ART` in `script.js`; `null` shows an empty dashed slot.
+the list of files are set by `STAMP_ART` in `script.js` (seven stamps; `null` would show an empty dashed slot).
 
 | # | Stamp | File |
 |---|---|---|
@@ -43,12 +43,11 @@ the list of files are set by `STAMP_ART` in `script.js`; `null` shows an empty d
 | 3 | Stage and crowd | `stamp-3.webp` |
 | 4 | Stamp card and phone | `stamp-4.webp` (also the "Collect the stamps" thumbnail, screen 11) |
 | 5 | Moonlit street | `stamp-5.webp` |
-| 6 | Lion dance | **waiting** for the file |
-| 7 | Chinatown gate | **waiting** for the file |
-| 8 | ? | not designed yet |
+| 6 | Lion dance | `stamp-6.webp` |
+| 7 | Chinatown gate | `stamp-7.webp` |
 
-`img/stop-art-1.svg` … `stop-art-8.svg` are drawings of each stop, used in the stop list until the
-stop has a photo.
+`img/stop-art-1.svg` … `stop-art-8.svg` are drawings of each stop, used in the stop list when a stop
+has no photo (all eight have photos now).
 
 ## Still to do
 
