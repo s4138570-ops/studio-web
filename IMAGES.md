@@ -33,9 +33,22 @@ Before a public launch, confirm the source and permission of every photo and add
 
 ## Stamps
 
-The team's own stamp art replaces `img/stamp-1.svg` … `img/stamp-8.svg`. Send the files to Claude,
-or save them with the same names (PNG works too if the `.svg` references in `script.js` and
-`index.html` are changed to `.png`).
+The team's stamp art is in `img/stamp-1.webp` … (white background removed, 480 px wide). The order and
+the list of files are set by `STAMP_ART` in `script.js`; `null` shows an empty dashed slot.
+
+| # | Stamp | File |
+|---|---|---|
+| 1 | Painting a lantern | `stamp-1.webp` |
+| 2 | Mooncakes | `stamp-2.webp` |
+| 3 | Stage and crowd | `stamp-3.webp` |
+| 4 | Stamp card and phone | `stamp-4.webp` (also the "Collect the stamps" thumbnail, screen 11) |
+| 5 | Moonlit street | `stamp-5.webp` |
+| 6 | Lion dance | **waiting** for the file |
+| 7 | Chinatown gate | **waiting** for the file |
+| 8 | ? | not designed yet |
+
+`img/stop-art-1.svg` … `stop-art-8.svg` are drawings of each stop, used in the stop list until the
+stop has a photo.
 
 ## Still to do
 

@@ -121,6 +121,9 @@ window.I18N = {
   'Stop 7: Kuomintang Building': ['第 7 站:Kuomintang Building', '第 7 站:Kuomintang Building'],
   // aria labels
   'Back': ['返回', '返回'], 'Capture': ['拍摄', '拍攝'], 'Close': ['关闭', '關閉'], 'Previous': ['上一个', '上一個'],
+  // stamps (aria labels)
+  "Stamp %n": ["第 %n 枚邮票章", "第 %n 枚郵票章"],
+  "Stamp %n, coming soon": ["第 %n 枚邮票章,即将推出", "第 %n 枚郵票章,即將推出"],
   // stop stories and per-stop screens (generated: 简体 written by hand, 繁體 converted with OpenCC s2twp)
   "The arches": ["牌楼", "牌樓"],
   "The furniture lanes": ["家具小巷", "傢俱小巷"],

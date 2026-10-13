@@ -52,6 +52,7 @@ function setLang(l) {
   document.querySelectorAll('[data-set-lang]').forEach((a) => a.classList.toggle('on', a.dataset.setLang === l));
   renderStop(cur);
   renderStopList();
+  labelStamps();
   buildJump();
   updateTitle();
 }
@@ -151,7 +152,7 @@ function renderStop(n) {
   shownStop = n;
 }
 
-// 10 all stops: photo when there is one, otherwise the stop's stamp
+// 10 all stops: photo when there is one, otherwise a drawing of the stop
 function renderStopList() {
   const box = $('s10-list');
   box.textContent = '';
@@ -160,7 +161,7 @@ function renderStopList() {
     a.className = 'card item';
     a.href = `#/1/${n}`;
     a.innerHTML = `<i class="ph thumb" data-slot="stop-thumb-${n}"><img alt=""></i><div><b></b><small></small></div>`;
-    a.querySelector('img').src = s.img || `img/stamp-${n}.svg`;
+    a.querySelector('img').src = s.img || `img/stop-art-${n}.svg`;
     a.querySelector('b').textContent = `${n} · ${t(s.name)}`;
     a.querySelector('small').textContent = t(s.line);
     box.appendChild(a);
@@ -233,15 +234,25 @@ remind.addEventListener('click', () => {
   setDyn(remind, on ? 'Reminder set ✓' : 'Remind me');
 });
 
-/* ---------- 12 stamps: 8 slots, first 3 collected, tap to toggle ---------- */
+/* ---------- 12 stamps: the team's stamp art, first 3 collected, tap to toggle ---------- */
+// null = stamp not designed yet: shown as an empty slot
+const STAMP_ART = ['img/stamp-1.webp', 'img/stamp-2.webp', 'img/stamp-3.webp', 'img/stamp-4.webp', 'img/stamp-5.webp', null, null, null];
 const stamps = document.getElementById('stamps');
 const count = document.getElementById('stamp-count');
-for (let i = 0; i < 8; i++) {
+STAMP_ART.forEach((src, i) => {
   const b = document.createElement('button');
-  b.setAttribute('aria-label', `Stop ${i + 1}`);
-  b.innerHTML = `<img src="img/stamp-${i + 1}.svg" alt="">`;
-  if (i < 3) b.className = 'on';
+  if (src) {
+    b.innerHTML = `<img src="${src}" alt="">`;
+    if (i < 3) b.className = 'on';
+  } else {
+    b.className = 'todo';
+    b.disabled = true;
+  }
   stamps.appendChild(b);
+});
+function labelStamps() {
+  stamps.querySelectorAll('button').forEach((b, i) =>
+    b.setAttribute('aria-label', t(b.disabled ? 'Stamp %n, coming soon' : 'Stamp %n', i + 1)));
 }
 stamps.addEventListener('click', (e) => {
   const b = e.target.closest('button');
