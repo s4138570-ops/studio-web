@@ -11,6 +11,7 @@
 /* Traditional Chinese: prefer the TC glyph set */
 :root:lang(zh-Hant){--serif:'Noto Serif','Noto Serif TC','Noto Serif SC',Georgia,'PMingLiU',serif;--display:'Fraunces',Georgia,'Noto Serif TC',serif}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{background:var(--desk)}
 body{margin:0;font-family:var(--serif);font-weight:400;color:var(--ink);line-height:1.5;font-size:14px;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
@@ -42,7 +43,7 @@ p{margin:0}
 .ph:has(img){border:0;background:none;overflow:visible}
 .ph[data-slot]:has(img)::after{display:none}
 .ph.thumb:has(img){overflow:hidden}
-.hero{height:170px}
+.hero{aspect-ratio:4/3;height:auto}
 /* torn-paper bottom edge on large images */
 .ph:not(.thumb):has(img){-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16px 8px repeat-x,linear-gradient(#000 0 0) top/100% calc(100% - 7px) no-repeat;
   mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16px 8px repeat-x,linear-gradient(#000 0 0) top/100% calc(100% - 7px) no-repeat}
@@ -65,6 +66,15 @@ p{margin:0}
 .lines{display:flex;flex-direction:column;gap:14px}
 .lines i{display:block;height:8px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--ink) 0 6px,transparent 6px 9px);opacity:.28}
 .lines i.short{width:62%}
+
+/* stop stories */
+.body,.story p{margin:0;font-size:15px;line-height:1.65}
+.story{display:flex;flex-direction:column;gap:12px}
+.teaser{margin:0;font-size:14px;color:var(--ink)}
+.credit{margin-top:-10px;font-size:11px;color:var(--muted)}
+.stoplist,.srclist{display:flex;flex-direction:column;gap:16px}
+.src-badge{width:56px;height:56px;flex:none;border-radius:6px;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font:700 13px/1 var(--serif);letter-spacing:.04em;font-style:normal}
+blockquote.card{font-family:var(--display);font-size:17px;line-height:1.4;color:var(--red)}
 
 /* buttons & cards (ticket / receipt feel) */
 .btn{display:block;width:100%;text-align:center;background:var(--card);color:var(--ink);border:2px solid var(--ink);

@@ -30,14 +30,15 @@
       </div>
     </div>
     <div class="urlbar"><i class="sq"></i><span>chinatownwalk.melbourne · no download</span></div>
-    <div data-slot="stop-hero" class="ph hero"></div>
-    <p class="eyebrow">STOP 3 OF 8</p>
-    <h1>Num Pon Soon Society</h1>
-    <p class="meta">200–202 Little Bourke Street · built 1861</p>
+    <div data-slot="stop-hero" class="ph hero" id="s1-hero"></div>
+    <p class="credit" id="s1-credit" data-dyn hidden></p>
+    <p class="eyebrow" id="s1-no" data-dyn></p>
+    <h1 id="s1-title" data-dyn></h1>
+    <p class="meta" id="s1-meta" data-dyn></p>
     <p class="eyebrow q">How much time do you have?</p>
-    <a class="btn primary" href="#/5">Quick Look · 2 min</a>
-    <a class="btn" href="#/6">Full Story · 7 min</a>
-      </section>
+    <a class="btn primary" id="s1-quick" href="#/5/3">Quick Look · 2 min</a>
+    <a class="btn" id="s1-full" href="#/6/3">Full Story · 7 min</a>
+  </section>
 
   <!-- 02 Language -->
   <section class="screen" data-screen="2" data-title="Language (first load)">
@@ -57,66 +58,65 @@
     <div class="urlbar"><i class="sq"></i><span>chinatownwalk.melbourne · no download</span></div>
     <div data-slot="intro-header" class="ph" style="height:142px"><img src="img/header-street.svg" alt=""></div>
     <h1>Little Bourke Street, 1850s to now</h1>
-    <div class="lines"><i></i><i></i><i></i><i class="short"></i></div>
+    <p class="body">Chinese people have lived, worked and worshipped along Little Bourke Street since the gold rush of the 1850s. These eight stops each tell part of that story. Start anywhere and take as long as you like.</p>
     <a class="btn primary" href="#/4">Start at the nearest stop</a>
     <a class="btn" href="#/9">Show me the map</a>
     <p class="eyebrow">TONIGHT · MID-AUTUMN</p>
     <a class="card item" href="#/11">
       <i data-slot="tonight-thumb" class="ph thumb"><img src="img/promo.jpg" alt=""></i>
-      <div><b>Lantern projection · 8pm</b><small>Sum Kum Lee facade</small></div>
+      <div><b>The street, projected · 8pm</b><small>Sum Kum Lee facade</small></div>
     </a>
   </section>
 
   <!-- 04 Depth choice -->
   <section class="screen" data-screen="4" data-title="Depth choice">
-    <header class="top"><a class="back" href="#/3" aria-label="Back"></a><span class="dot"></span><b>Num Pon Soon</b><small>Stop 3 of 8</small></header>
+    <header class="top"><a class="back" href="#/3" aria-label="Back"></a><span class="dot"></span><b id="s4-name" data-dyn></b><small id="s4-no" data-dyn></small></header>
     <h1>How much time do you have?</h1>
-    <a class="card choice" href="#/5">
+    <a class="card choice" id="s4-quick" href="#/5/3">
       <h2>Quick Look</h2><p class="meta">2 minutes · one thing to find</p>
-      <div class="lines"><i></i><i class="short"></i></div>
+      <p class="teaser" id="s4-qt" data-dyn></p>
     </a>
-    <a class="card choice" href="#/6">
+    <a class="card choice" id="s4-full" href="#/6/3">
       <h2>Full Story</h2><p class="meta">7 minutes · with sources</p>
-      <div class="lines"><i></i><i></i><i class="short"></i></div>
+      <p class="teaser" id="s4-ft" data-dyn></p>
     </a>
     <p class="note">You can switch at any time. Neither one is the “real” version.</p>
   </section>
 
   <!-- 05 Stop — Quick Look -->
   <section class="screen" data-screen="5" data-title="Stop — Quick Look">
-    <header class="top"><a class="back" href="#/4" aria-label="Back"></a><span class="dot"></span><b>Quick Look</b><small>2 min</small></header>
-    <div data-slot="quick-hero" class="ph" style="height:180px"></div>
-    <h1>Look up at the top floor</h1>
-    <div class="lines"><i></i><i></i><i class="short"></i></div>
+    <header class="top"><a class="back" id="s5-back" href="#/1/3" aria-label="Back"></a><span class="dot"></span><b>Quick Look</b><small>2 min</small></header>
+    <div data-slot="quick-hero" class="ph hero" id="s5-hero"></div>
+    <p class="credit" id="s5-credit" data-dyn hidden></p>
+    <h1 id="s5-title" data-dyn></h1>
+    <div class="story" id="s5-text" data-dyn></div>
     <div class="card pad find">
       <p class="eyebrow">FIND IT</p>
-      <p>The columns are European. Something on the upper level is not. What is it?</p>
+      <p id="s5-find" data-dyn></p>
       <button class="btn primary" id="found" data-k="I found it">I found it</button>
-      <p class="reveal" id="reveal" hidden>Nice spotting! Tap “Full Story” if you’d like the background.</p>
+      <p class="reveal" id="reveal" data-dyn hidden></p>
     </div>
-    <a class="btn" href="#/10">Next stop · 90 m</a>
-    <a class="switch" href="#/6">Switch to Full Story</a>
+    <a class="btn" id="s5-next" href="#/1/4" data-dyn></a>
+    <a class="switch" id="s5-switch" href="#/6/3">Switch to Full Story</a>
   </section>
 
   <!-- 06 Stop — Full Story -->
   <section class="screen" data-screen="6" data-title="Stop — Full Story">
-    <header class="top"><a class="back" href="#/4" aria-label="Back"></a><span class="dot"></span><b>Full Story</b><small>7 min</small></header>
-    <div data-slot="full-hero" class="ph" style="height:114px"></div>
-    <h1>A European building wearing two identities</h1>
-    <div class="lines"><i></i><i></i><i></i><i></i><i></i><i class="short"></i></div>
-    <blockquote class="card pad">“The columns share their pedestal detailing with Parliament House.”</blockquote>
-    <a class="card item" href="#/7"><div><b>3 sources</b><small>Heritage Victoria · SLV · PROV</small></div><span class="chev"></span></a>
-    <a class="btn primary" href="#/8">See it in AR</a>
+    <header class="top"><a class="back" id="s6-back" href="#/1/3" aria-label="Back"></a><span class="dot"></span><b>Full Story</b><small>7 min</small></header>
+    <div data-slot="full-hero" class="ph hero" id="s6-hero"></div>
+    <p class="credit" id="s6-credit" data-dyn hidden></p>
+    <h1 id="s6-title" data-dyn></h1>
+    <div class="story" id="s6-text" data-dyn></div>
+    <blockquote class="card pad" id="s6-quote" data-dyn></blockquote>
+    <a class="card item" id="s6-src" href="#/7/3"><div><b id="s6-src-n" data-dyn></b><small id="s6-src-list" data-dyn></small></div><span class="chev"></span></a>
+    <a class="btn primary" id="s6-ar" href="#/8">See it in AR</a>
   </section>
 
   <!-- 07 Sources -->
   <section class="screen" data-screen="7" data-title="Sources">
-    <header class="top"><a class="back" href="#/6" aria-label="Back"></a><span class="dot"></span><b>Sources</b></header>
+    <header class="top"><a class="back" id="s7-back" href="#/6/3" aria-label="Back"></a><span class="dot"></span><b>Sources</b></header>
     <p class="meta lead">Every claim on the previous screen can be checked.</p>
-    <a class="card item" href="#/7"><i data-slot="source-1" class="ph thumb"></i><div><b>Victorian Heritage Database</b><small>Statement of significance, Num Pon Soon</small></div></a>
-    <a class="card item" href="#/7"><i data-slot="source-2" class="ph thumb"></i><div><b>State Library Victoria</b><small>The Chinese Exchange, photograph, 1863</small></div></a>
-    <a class="card item" href="#/7"><i data-slot="source-3" class="ph thumb"></i><div><b>Public Record Office Victoria</b><small>Anti-poll-tax petitions, 1856</small></div></a>
-    <a class="card item" href="#/7"><i data-slot="source-4" class="ph thumb"></i><div><b>Australian Dictionary of Biography</b><small>Lowe Kong Meng, 1831–1888</small></div></a>
+    <div class="srclist" id="s7-list" data-dyn></div>
     <p class="note">Opens in a new tab. We don’t track what you read.</p>
   </section>
 
@@ -145,14 +145,14 @@
       <span class="street" style="left:78.4%;top:66.0%" aria-hidden="true">Bourke St</span>
       <span class="street v" style="left:43.9%;top:52.0%" aria-hidden="true">Russell St</span>
       <span class="street v" style="left:95.9%;top:59.6%" aria-hidden="true">Exhibition St</span>
-      <a class="pin" style="left:96.2%;top:36.9%" href="#/1" aria-label="Stop 1: The arches">1</a>
-      <a class="pin near" style="left:89.0%;top:33.0%" href="#/1" aria-label="Stop 2: Sum Kum Lee">2</a>
-      <a class="pin" style="left:40.1%;top:34.3%" href="#/1" aria-label="Stop 3: Num Pon Soon">3</a>
-      <a class="pin" style="left:70.1%;top:25.1%" href="#/1" aria-label="Stop 4: Cohen Place">4</a>
-      <a class="pin" style="left:59.9%;top:51.2%" href="#/1" aria-label="Stop 5: The furniture lanes">5</a>
-      <a class="pin" style="left:48.9%;top:34.0%" href="#/1" aria-label="Stop 6: Chinese Mission Church">6</a>
-      <a class="pin" style="left:87.8%;top:41.4%" href="#/1" aria-label="Stop 7: Kuomintang Building">7</a>
-      <a class="pin" style="left:31.3%;top:34.7%" href="#/1" aria-label="Stop 8: 212–220 Little Bourke Street">8</a>
+      <a class="pin" style="left:96.2%;top:36.9%" href="#/1/1" aria-label="Stop 1: The arches">1</a>
+      <a class="pin near" style="left:89.0%;top:33.0%" href="#/1/2" aria-label="Stop 2: Sum Kum Lee">2</a>
+      <a class="pin" style="left:40.1%;top:34.3%" href="#/1/3" aria-label="Stop 3: Num Pon Soon">3</a>
+      <a class="pin" style="left:70.1%;top:25.1%" href="#/1/4" aria-label="Stop 4: Cohen Place">4</a>
+      <a class="pin" style="left:59.9%;top:51.2%" href="#/1/5" aria-label="Stop 5: The furniture lanes">5</a>
+      <a class="pin" style="left:48.9%;top:34.0%" href="#/1/6" aria-label="Stop 6: Chinese Mission Church">6</a>
+      <a class="pin" style="left:87.8%;top:41.4%" href="#/1/7" aria-label="Stop 7: Kuomintang Building">7</a>
+      <a class="pin" style="left:31.3%;top:34.7%" href="#/1/8" aria-label="Stop 8: Celestial Avenue">8</a>
     </div>
     <p class="note">Map data © Google · stop positions are approximate</p>
     <div class="card pad sheet">
@@ -160,7 +160,7 @@
       <p class="eyebrow">Nearest stop</p>
       <h2>Sum Kum Lee · 112–114</h2>
       <p class="meta">70 m · about 1 minute walk</p>
-      <a class="btn primary" href="#/10">Take me there</a>
+      <a class="btn primary" href="#/1/2">Take me there</a>
     </div>
     <p class="note">Route is step-free and pram accessible.</p>
   </section>
@@ -169,14 +169,7 @@
   <section class="screen" data-screen="10" data-title="All stops">
     <header class="top"><a class="back" href="#/3" aria-label="Back"></a><span class="dot"></span><b>All stops</b><small>8 stops · 40 min</small></header>
     <p class="meta lead">Start anywhere. Each stop works on its own.</p>
-    <a class="card item" href="#/1"><i data-slot="stop-thumb-1" class="ph thumb"><img src="img/stamp-1.svg" alt=""></i><div><b>1 · The arches</b><small>1976 · younger than they look</small></div></a>
-    <a class="card item" href="#/1"><i data-slot="stop-thumb-2" class="ph thumb"><img src="img/stamp-2.svg" alt=""></i><div><b>2 · Sum Kum Lee</b><small>1887 · a merchant’s warehouse</small></div></a>
-    <a class="card item" href="#/1"><i data-slot="stop-thumb-3" class="ph thumb"><img src="img/stamp-3.svg" alt=""></i><div><b>3 · Num Pon Soon</b><small>1861 · two identities</small></div></a>
-    <a class="card item" href="#/1"><i data-slot="stop-thumb-4" class="ph thumb"><img src="img/stamp-4.svg" alt=""></i><div><b>4 · Cohen Place</b><small>The museum and the plaza</small></div></a>
-    <a class="card item" href="#/1"><i data-slot="stop-thumb-5" class="ph thumb"><img src="img/stamp-5.svg" alt=""></i><div><b>5 · The furniture lanes</b><small>Where 175 workshops stood</small></div></a>
-    <a class="card item" href="#/1"><i data-slot="stop-thumb-6" class="ph thumb"><img src="img/stamp-6.svg" alt=""></i><div><b>6 · Chinese Mission Church</b><small>1872 · a Methodist mission church</small></div></a>
-    <a class="card item" href="#/1"><i data-slot="stop-thumb-7" class="ph thumb"><img src="img/stamp-7.svg" alt=""></i><div><b>7 · Kuomintang Building</b><small>1921 · occupied by the Chinese Nationalist Club</small></div></a>
-    <a class="card item" href="#/1"><i data-slot="stop-thumb-8" class="ph thumb"><img src="img/stamp-8.svg" alt=""></i><div><b>8 · 212–220 Little Bourke Street</b><small>Chinese-occupied since 1862</small></div></a>
+    <div class="stoplist" id="s10-list" data-dyn></div>
   </section>
 
   <!-- 11 Tonight — projection -->
@@ -186,14 +179,14 @@
     <p class="eyebrow">TONIGHT · MID-AUTUMN</p>
     <h1>The street, projected</h1>
     <p class="meta">8:00pm–10:00pm · Sum Kum Lee facade 112–114 Little Bourke Street</p>
-    <div class="lines"><i></i><i></i><i class="short"></i></div>
+    <p class="body">On Mid-Autumn night, pictures of Little Bourke Street through time are projected onto the Sum Kum Lee facade. Find a spot across the street and look up.</p>
     <div class="card pad">
       <p class="eyebrow">STARTS IN</p>
       <div class="count" id="count"><span><b id="c-h">--</b>h</span><span><b id="c-m">--</b>m</span><span><b id="c-s">--</b>s</span></div>
     </div>
     <button class="btn primary" id="remind" data-k="Remind me">Remind me</button>
     <p class="eyebrow">ALSO ON TONIGHT</p>
-    <a class="card item" href="#/12"><i data-slot="also-thumb" class="ph thumb"><img src="img/motif-lantern.svg" alt=""></i><div><b>Lantern making</b><small>Chinatown Square · from 6pm</small></div></a>
+    <a class="card item" href="#/12"><i data-slot="also-thumb" class="ph thumb"><img src="img/stamp-1.svg" alt=""></i><div><b>Collect the stamps</b><small>Along the walk</small></div></a>
   </section>
 
   <!-- 12 Stamps & progress -->
@@ -205,7 +198,6 @@
     <p class="eyebrow">NEAREST STATIONS</p>
     <a class="card item" href="#/9"><i data-slot="station-1" class="ph thumb"><img src="img/stamp-4.svg" alt=""></i><div><b>Chinatown Square</b><small>Self-serve · 120 m</small></div></a>
     <a class="card item" href="#/9"><i data-slot="station-2" class="ph thumb"><img src="img/stamp-3.svg" alt=""></i><div><b>Chinese Museum, Cohen Pl</b><small>Staffed until 4pm · 260 m</small></div></a>
-    <a class="card item" href="#/9"><i data-slot="station-3" class="ph thumb"><img src="img/motif-lantern.svg" alt=""></i><div><b>Lantern workshop tent</b><small>Tonight only · 300 m</small></div></a>
     <a class="btn" href="#/9">Show all on map</a>
     <a class="switch" href="#/13">Take your walk home</a>
   </section>
@@ -236,6 +228,7 @@
 
 </div>
 <script src="api.js"></script>
+<script src="stops.js"></script>
 <script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>

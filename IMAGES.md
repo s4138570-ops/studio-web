@@ -1,33 +1,55 @@
-# Image slots (for the team)
+# Images and content (for the team)
 
-Every dashed "IMAGE · name" box in the page is a slot. To fill one, put your picture inside it:
+## Where things live
 
-```html
-<div data-slot="stop-hero" class="ph hero"><img src="img/stop-hero.jpg" alt="Short description"></div>
-```
+| What | File |
+|---|---|
+| Stop text (English): title, address line, Quick Look, Find it, Full Story, sources | `stops.js` |
+| 简体 / 繁體 translations of every string | `i18n.js` (繁體 converted from 简体 with OpenCC, Taiwan wording) |
+| Stop photos | `img/stop-1.jpg` … `img/stop-8.jpg`, set by `img:` in `stops.js` |
+| Stamps | `img/stamp-1.svg` … `img/stamp-8.svg` (placeholders) |
 
-The label and dashed border disappear automatically, and large images get a torn-paper bottom edge.
-Use `.jpg`/`.webp` for photos, `.svg`/`.png` for illustrations. Keep each file under ~300 KB.
+Each stop has its own pages: `#/1/7` is the entry page of stop 7, `#/5/7` its Quick Look,
+`#/6/7` its Full Story and `#/7/7` its sources. The stop list (screen 10) and the map pins link there.
 
-| Slot name | Screen | Size (px) | Notes |
+## Stop photos
+
+Crop to 4:3 (about 720 × 540 px, under 300 KB) and set `img:` in `stops.js`. A stop with `img: null`
+shows the empty image slot.
+
+| Stop | File | Status | Credit (fill in) |
 |---|---|---|---|
-| `stop-hero` | 01 | 706 × 340 | Real photo of Num Pon Soon Society (licensed / archive) |
-| `quick-hero` | 05 | 706 × 360 | **Find-it image** — made by the team |
-| `full-hero` | 06 | 706 × 228 | Real photo or archive image |
-| `source-1` … `source-4` | 07 | 80 × 80 | Institution logos (check usage rules) |
-| `ar-view` | 08 | 706 × 860 | Camera preview / AR mock-up |
-| `map` | 09 | done | `map.jpg` = Google Maps screenshot, cropped and lightened. The numbered stop pins are links laid over it in `index.html` (screen 09); move a pin by editing its `left`/`top` %. Positions are estimates — check on site. |
+| 1 The arches | `stop-1.jpg` | **waiting**: the Exhibition Street arch photo | ? |
+| 2 Sum Kum Lee | `stop-2.jpg` | **waiting**: the Shanghai Village facade photo | ? |
+| 3 Num Pon Soon | `stop-3.jpg` | done | ? (looks like a heritage-survey slide) |
+| 4 Cohen Place | `stop-4.jpg` | **waiting**: the Chinese Museum entrance with the lions | ? |
+| 5 The furniture lanes | `stop-5.jpg` | done | Australasian Sketcher, April 1880 (shown on the page) |
+| 6 Chinese Mission Church | `stop-6.jpg` | done | ? |
+| 7 Kuomintang Building | `stop-7.jpg` | done | ? |
+| 8 Celestial Avenue | `stop-8.jpg` | done | Google Street View (shown on the page) |
 
-Already drawn (SVG in `img/`, replace freely): `stamp-1…8.svg` (one per stop; stops 6–8 are the Chinese Mission Church, Kuomintang Building and 212–220 Little Bourke Street),
-`motif-fan.svg`, `motif-lantern.svg`, `motif-noodle.svg` (festival motifs), `header-street.svg`
-(screens 02 & 03), `banner-tonight.svg` (spare, replaced by the poster), `share-card.svg` (13), `offline.svg` (14).
+Before a public launch, confirm the source and permission of every photo and add the credit to
+`credit:` in `stops.js`.
 
-From the team: `promo.jpg` — the Mid-Autumn event poster (screen 11 in full, screen 03 as a thumbnail).
+## Stamps
+
+The team's own stamp art replaces `img/stamp-1.svg` … `img/stamp-8.svg`. Send the files to Claude,
+or save them with the same names (PNG works too if the `.svg` references in `script.js` and
+`index.html` are changed to `.png`).
+
+## Still to do
+
+- **AR (screen 08)**: waiting on the team. The "See it in AR" button shows on stop 3 only.
+- **Find it**: each challenge was written from the photos. Check on site that the thing is still there.
+- **Map pins**: positions are estimates from street numbers; move a pin by editing its `left`/`top` %
+  in `index.html` (screen 09).
+- **Facts**: every story cites its sources on the Sources screen. Where records disagree, the text says so.
+
+## Other images
+
+`header-street.svg` (screens 02 & 03), `share-card.svg` (13), `offline.svg` (14), `map.jpg` (09, Google Maps
+screenshot), `promo.jpg` (the team's Mid-Autumn poster, screens 03 & 11). Spare: `banner-tonight.svg`,
+`motif-fan.svg`, `motif-lantern.svg`, `motif-noodle.svg`.
 
 Palette: red `#C41E2A` · teal `#16303A` · green `#0A7A3C` · cream `#FBF1DC` · peach `#F8D9A8` ·
 yellow `#F1EB7A` · orange `#F07A2E`. Fonts: Fraunces italic (headings), Noto Serif / SC / TC (text).
-
-Translations live in `i18n.js` (English → 简体, 繁體). Proper names are kept in English until
-official Chinese names are confirmed.
-
-Stops 6–8 are based on Victorian Heritage Database entries; confirm details against the originals before launch.

@@ -19,10 +19,11 @@ function t(key, n) {
   return n == null ? text : text.replace('%n', n);
 }
 
-// collect static text once; dynamic text (data-k) is re-rendered from its key instead
+// collect static text once; dynamic text (data-k) is re-rendered from its key instead,
+// and per-stop content (data-dyn) is rebuilt by renderStop()
 const textNodes = [];
 const walker = document.createTreeWalker(phone, NodeFilter.SHOW_TEXT, {
-  acceptNode: (n) => n.nodeValue.trim() && !n.parentElement.closest('[data-k]')
+  acceptNode: (n) => n.nodeValue.trim() && !n.parentElement.closest('[data-k],[data-dyn]')
     ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT,
 });
 while (walker.nextNode()) {
@@ -49,8 +50,121 @@ function setLang(l) {
   ariaEls.forEach(({ el, en }) => el.setAttribute('aria-label', t(en)));
   altEls.forEach(({ el, en }) => { el.alt = t(en); });
   document.querySelectorAll('[data-set-lang]').forEach((a) => a.classList.toggle('on', a.dataset.setLang === l));
+  renderStop(cur);
+  renderStopList();
   buildJump();
   updateTitle();
+}
+
+/* ---------- stops: screens 1, 4, 5, 6, 7 show the current stop; 10 lists them all ---------- */
+const STOPS = window.STOPS;
+const $ = (id) => document.getElementById(id);
+let cur = 3; // the stop shown when a link has no stop number (#/1, #/5 …)
+let shownStop = null;
+
+function setImg(slot, src, alt) {
+  slot.textContent = '';
+  if (!src) return; // no photo yet: the empty, labelled image slot stays
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = t(alt);
+  slot.appendChild(img);
+}
+function setCredit(el, credit) {
+  el.hidden = !credit;
+  el.textContent = credit ? t(credit) : '';
+}
+function setParas(box, paras) {
+  box.textContent = '';
+  paras.forEach((p) => {
+    const el = document.createElement('p');
+    el.textContent = t(p);
+    box.appendChild(el);
+  });
+}
+
+function renderStop(n) {
+  const s = STOPS[n];
+  const next = (n % 8) + 1;
+  const sources = s.full.sources;
+
+  // 01 entry (QR landing)
+  setImg($('s1-hero'), s.img, s.alt);
+  setCredit($('s1-credit'), s.credit);
+  $('s1-no').textContent = t('STOP %n OF 8', n);
+  $('s1-title').textContent = t(s.title);
+  $('s1-meta').textContent = t(s.meta);
+  $('s1-quick').href = `#/5/${n}`;
+  $('s1-full').href = `#/6/${n}`;
+
+  // 04 depth choice
+  $('s4-name').textContent = t(s.name);
+  $('s4-no').textContent = t('Stop %n of 8', n);
+  $('s4-qt').textContent = t(s.quick.title);
+  $('s4-ft').textContent = t(s.full.title);
+  $('s4-quick').href = `#/5/${n}`;
+  $('s4-full').href = `#/6/${n}`;
+
+  // 05 quick look
+  setImg($('s5-hero'), s.img, s.alt);
+  setCredit($('s5-credit'), s.credit);
+  $('s5-title').textContent = t(s.quick.title);
+  setParas($('s5-text'), s.quick.text);
+  $('s5-find').textContent = t(s.quick.find);
+  $('reveal').textContent = t(s.quick.answer || 'Nice spotting! Tap “Full Story” if you’d like the background.');
+  if (n !== shownStop) { // a different stop starts with the answer hidden again
+    $('reveal').hidden = true;
+    setDyn($('found'), 'I found it');
+  }
+  $('s5-next').textContent = t('Next stop · %n', t(STOPS[next].name));
+  $('s5-next').href = `#/1/${next}`;
+  $('s5-back').href = `#/1/${n}`;
+  $('s5-switch').href = `#/6/${n}`;
+
+  // 06 full story
+  setImg($('s6-hero'), s.img, s.alt);
+  setCredit($('s6-credit'), s.credit);
+  $('s6-title').textContent = t(s.full.title);
+  setParas($('s6-text'), s.full.text);
+  $('s6-quote').textContent = t(s.full.quote);
+  $('s6-src-n').textContent = t('%n sources', sources.length);
+  $('s6-src-list').textContent = [...new Set(sources.map((x) => x.name))].join(' · ');
+  $('s6-src').href = `#/7/${n}`;
+  $('s6-back').href = `#/1/${n}`;
+  $('s6-ar').hidden = n !== 3; // AR exists for stop 3 only so far
+
+  // 07 sources (links open in a new tab; a print source has no link)
+  $('s7-back').href = `#/6/${n}`;
+  const list = $('s7-list');
+  list.textContent = '';
+  sources.forEach((x) => {
+    const el = document.createElement(x.url ? 'a' : 'div');
+    el.className = 'card item';
+    if (x.url) { el.href = x.url; el.target = '_blank'; el.rel = 'noopener'; }
+    el.innerHTML = '<i class="src-badge" aria-hidden="true"></i><div><b></b><small></small></div>';
+    el.querySelector('.src-badge').textContent = x.abbr;
+    el.querySelector('b').textContent = x.name;
+    el.querySelector('small').textContent = t(x.desc);
+    list.appendChild(el);
+  });
+
+  shownStop = n;
+}
+
+// 10 all stops: photo when there is one, otherwise the stop's stamp
+function renderStopList() {
+  const box = $('s10-list');
+  box.textContent = '';
+  Object.entries(STOPS).forEach(([n, s]) => {
+    const a = document.createElement('a');
+    a.className = 'card item';
+    a.href = `#/1/${n}`;
+    a.innerHTML = `<i class="ph thumb" data-slot="stop-thumb-${n}"><img alt=""></i><div><b></b><small></small></div>`;
+    a.querySelector('img').src = s.img || `img/stamp-${n}.svg`;
+    a.querySelector('b').textContent = `${n} · ${t(s.name)}`;
+    a.querySelector('small').textContent = t(s.line);
+    box.appendChild(a);
+  });
 }
 
 document.querySelectorAll('[data-set-lang]').forEach((a) =>
@@ -59,7 +173,7 @@ document.querySelectorAll('[data-set-lang]').forEach((a) =>
 document.querySelectorAll('.lang').forEach((a) =>
   a.addEventListener('click', () => setLang(a.dataset.lang)));
 
-/* ---------- router: #/1 … #/14 ---------- */
+/* ---------- router: #/1 … #/14, optionally with a stop: #/1/7 = entry page of stop 7 ---------- */
 const decode = (s) => { const d = document.createElement('textarea'); d.innerHTML = s; return d.value; };
 function buildJump() {
   jump.innerHTML = '';
@@ -71,8 +185,9 @@ function buildJump() {
   });
   markJump();
 }
+const parseHash = () => location.hash.match(/^#\/(\d+)(?:\/(\d+))?$/) || [];
 function current() {
-  const n = (location.hash.match(/^#\/(\d+)$/) || [])[1] || '1';
+  const n = parseHash()[1] || '1';
   return screens.find((s) => s.dataset.screen === n) || screens[0];
 }
 function markJump() {
@@ -83,6 +198,9 @@ function updateTitle() {
   document.title = `${t(decode(current().dataset.title))} · Chinatown Walk Melbourne`;
 }
 function route() {
+  const stop = Number(parseHash()[2]);
+  if (STOPS[stop]) cur = stop;
+  renderStop(cur);
   const target = current();
   screens.forEach((s) => s.classList.toggle('active', s === target));
   markJump();

@@ -1,0 +1,228 @@
+// Content for the eight stops (English). Every string here is also a key in i18n.js,
+// which holds the 简体 and 繁體 versions. Facts come from the sources listed per stop.
+// img: null = photo not added yet (the page shows an empty image slot instead).
+window.STOPS = {
+  1: {
+    line: '1976 · younger than they look',
+    name: 'The arches',
+    title: 'The Chinatown arches',
+    meta: 'Little Bourke Street at Exhibition Street · 1970s',
+    img: null,
+    alt: 'Red Chinese gateway with a tiled roof over Little Bourke Street',
+    quick: {
+      title: 'Look up at the roof',
+      text: ['This gateway looks centuries old, but it went up in the 1970s, when Little Bourke Street was officially named Chinatown.'],
+      find: 'Look up at the roof of the gate. What colour are its tiles?',
+      answer: 'Golden yellow. In imperial China, yellow glazed tiles were reserved for the emperor’s buildings.',
+    },
+    full: {
+      title: 'Younger than they look',
+      text: [
+        'Chinese people have lived and traded on Little Bourke Street since the gold rush of the 1850s, but for more than a century the street had no gateways at all.',
+        'In the mid-1970s the city and state governments made Little Bourke Street a tourist and heritage precinct and named it Chinatown. Archways went up at the ends of the street; a photograph in the Chinese Museum’s collection shows their launch in about 1975.',
+        'A second phase from 1984 rebuilt the archways and added theme lighting, decorative paving and the Chinese Museum. So the gates are younger than most of the buildings behind them.',
+      ],
+      quote: 'The gates are younger than almost every building behind them.',
+      sources: [
+        { abbr: 'CM', name: 'Chinese Museum', desc: 'Melbourne’s Chinatown – Little Bourke Street area', url: 'https://www.chia.chinesemuseum.com.au/biogs/CH00015b.htm' },
+        { abbr: 'CM', name: 'Chinese Museum', desc: '50th anniversary of the arches', url: 'https://www.chinesemuseum.com.au/50th-anniversary-arches' },
+        { abbr: 'eM', name: 'eMelbourne', desc: 'Chinese: heritage precinct status, 1975–76 and 1984', url: 'https://www.emelbourne.net.au/biogs/EM00338b.htm' },
+      ],
+    },
+  },
+  2: {
+    line: '1887 · a merchant’s warehouse',
+    name: 'Sum Kum Lee',
+    title: 'Sum Kum Lee',
+    meta: '112–114 Little Bourke Street · built 1887–88',
+    img: null,
+    alt: 'Ornate cream three-storey facade with arched windows and balconies',
+    quick: {
+      title: 'A warehouse dressed to impress',
+      text: ['Built in 1887–88, during Melbourne’s land boom, this narrow warehouse wears one of the most decorated fronts on the street.'],
+      find: 'Count the storeys from the street up to the roofline. How many are there?',
+      answer: 'Three, with a basement hidden below.',
+    },
+    full: {
+      title: 'A merchant’s warehouse, then a newspaper',
+      text: [
+        'The architect George De Lacy Evans designed this three-storey building, with a basement, in 1887–88. Its heavily decorated front is boom-style classicism with a Western take on Chinese style.',
+        'The records disagree about who commissioned it. The Victorian Heritage Register names the merchant and community leader Lowe Kong Meng; other listings name the merchant Sum Kum Lee, whose name the building carries.',
+        'Its use soon changed. From 1889 until 1903 it held the offices of Table Talk, a Melbourne society newspaper founded by Maurice Brodzky. Many businesses have followed since.',
+      ],
+      quote: 'A Chinese merchant’s warehouse that became a newspaper office.',
+      sources: [
+        { abbr: 'VHD', name: 'Victorian Heritage Database', desc: 'Sum Kum Lee', url: 'https://vhd.heritagecouncil.vic.gov.au/places/9291' },
+        { abbr: 'SoM', name: 'Storey of Melbourne', desc: 'Sum Kum Lee, Chinatown, 1888', url: 'https://storeyofmelbourne.org/2019/02/07/1086/' },
+      ],
+    },
+  },
+  3: {
+    line: '1861 · two identities',
+    name: 'Num Pon Soon',
+    title: 'Num Pon Soon Society',
+    meta: '200–202 Little Bourke Street · built 1861',
+    img: 'img/stop-3.jpg',
+    alt: 'Two-storey building with columns on both floors and a balcony on the upper level',
+    quick: {
+      title: 'Look up at the top floor',
+      text: ['Built in 1861, in the gold-rush years, this is the home of a Chinese district society, and the society still meets upstairs.'],
+      find: 'The columns are European. Something on the upper level is not. What is it?',
+      answer: null,
+    },
+    full: {
+      title: 'A European building wearing two identities',
+      text: [
+        'In 1861 a Chinese district association built this two-storey clubhouse. Its name, Num Pon Soon, joins three counties near Guangzhou: Nanhai, Panyu and Shunde.',
+        'From the street it looks like many Victorian buildings of its time; the Heritage Register credits the architects Knight and Kerr. Inside, it was a meeting place and a place of worship, and an ancestors’ shrine is still kept here.',
+        'The merchant Lowe Kong Meng, a leader of Melbourne’s Chinese community, owned the building. Today the ground floor is let to businesses, while the Society still meets in the room upstairs.',
+      ],
+      quote: 'Upstairs, the Society still meets beside its ancestors’ shrine.',
+      sources: [
+        { abbr: 'VHR', name: 'Victorian Heritage Register', desc: 'Num Pon Soon Society Building (H0485)', url: 'https://vhd.heritagecouncil.vic.gov.au/places/780' },
+        { abbr: 'VHI', name: 'Victorian Heritage Inventory', desc: 'Chinese Club House “Num Pon Soon”', url: 'https://vhd.heritagecouncil.vic.gov.au/places/9231' },
+        { abbr: 'NT', name: 'National Trust', desc: 'Num Pon Soon Society building', url: 'https://vhd.heritagecouncil.vic.gov.au/places/65204' },
+      ],
+    },
+  },
+  4: {
+    line: 'The museum and the plaza',
+    name: 'Cohen Place',
+    title: 'Cohen Place and the Chinese Museum',
+    meta: '22 Cohen Place · built 1890',
+    img: null,
+    alt: 'Red-brick museum entrance guarded by two white stone lions',
+    quick: {
+      title: 'Two lions at the door',
+      text: ['The Cohen brothers built this red-brick warehouse in 1890 to make furniture. Since 1985 it has been the Chinese Museum.'],
+      find: 'Two stone guardians sit at the museum door. What animals are they?',
+      answer: 'Lions, a traditional pair of guardians at Chinese doorways.',
+    },
+    full: {
+      title: 'From furniture warehouse to museum',
+      text: [
+        'In 1890 the Cohen brothers built this four-storey warehouse off Little Bourke Street and used it to make furniture, the same trade that filled Chinatown’s lanes.',
+        'Later it stored costumes for Her Majesty’s Theatre. In 1984 the Victorian Government bought it, with support from the Chinese community and the City of Melbourne, and in 1985 it became the Museum of Chinese Australian History.',
+        'Today the museum fills five floors. It is home to the Millennium Dragon, which comes out to parade at Chinese New Year.',
+      ],
+      quote: 'A furniture warehouse became the home of Chinese Australian history.',
+      sources: [
+        { abbr: 'W', name: 'Wikipedia', desc: 'Chinese Museum, Melbourne', url: 'https://en.wikipedia.org/wiki/Chinese_Museum,_Melbourne' },
+        { abbr: 'VM', name: 'Victorian Museums', desc: 'Museum of Chinese Australian History', url: 'https://www.victorianmuseums.com.au/museum-of-chinese-australian-history' },
+        { abbr: 'eM', name: 'eMelbourne', desc: 'Museum of Chinese Australian History', url: 'https://www.emelbourne.net.au/biogs/EM01032b.htm' },
+      ],
+    },
+  },
+  5: {
+    line: '1880s · Chinese furniture workshops',
+    name: 'The furniture lanes',
+    title: 'The furniture lanes',
+    meta: 'Little Bourke Street · 1880s–1920',
+    img: 'img/stop-5.jpg',
+    alt: 'Engraving of Chinese furniture makers sawing and planing in a crowded workshop',
+    credit: 'Engraving: Australasian Sketcher, April 1880',
+    quick: {
+      title: 'Listen for the saws',
+      text: ['In the 1880s and 1890s, Chinese cabinetmakers worked in small workshops along Little Bourke Street, making chairs, tables, washstands and cupboards.'],
+      find: 'In the engraving, one worker holds the wood with his feet. What tool is in his hands?',
+      answer: 'A frame saw. His feet do the job of a vice.',
+    },
+    full: {
+      title: 'Made in Little Bourke Street',
+      text: [
+        'In April 1880 the Australasian Sketcher printed this engraving of Chinese furniture makers in Little Bourke Street. That year about 66 Chinese people were making furniture in Melbourne.',
+        'The trade grew with the building boom. Workshops such as Tock & Co, at 136–138 Little Bourke Street from 1884 to 1920, made chairs, tables, washstands, cupboards, meat safes and dressing tables, often in cheaper lines.',
+        'Some pieces carried the stamp “Chinese Labour”; a surviving cabinet by Louey Quing is marked this way. In the lean years of the 1890s depression, Chinese workshops were, by one account, the majority of Victoria’s furniture makers.',
+      ],
+      quote: '“Chinese Labour”, stamped on the furniture itself.',
+      sources: [
+        { abbr: 'WR', name: 'Wood Review', desc: 'Chinese-Australian furniture makers and their tools', url: 'https://www.woodreview.com.au/tools-and-equipment/historical-chinese-australian-furniture-makers-and-their-tools' },
+        { abbr: 'AS', name: 'Australasian Sketcher', desc: '“Chinese furniture makers, Little Bourke-Street”, April 1880', url: null },
+      ],
+    },
+  },
+  6: {
+    line: '1872 · a Methodist mission church',
+    name: 'Chinese Mission Church',
+    title: 'Chinese Mission Church',
+    meta: '196 Little Bourke Street · built 1872',
+    img: 'img/stop-6.jpg',
+    alt: 'Red-brick church with Gothic arches and diamond-patterned brickwork on a lane corner',
+    quick: {
+      title: 'Patterns in the brick',
+      text: ['Wesleyan Methodists built this small church in 1872 for their mission to Chinese people. Its patterned, multicoloured brickwork is among the earliest in Victoria.'],
+      find: 'Look at the brickwork between the windows. What shape does the pattern make?',
+      answer: 'Diamonds: a “diaper” pattern in contrasting bricks.',
+    },
+    full: {
+      title: 'A mission comes to town',
+      text: [
+        'The Wesleyan Methodists had run missions to Chinese people on the goldfields. In 1872 they brought that work into Chinatown with this church, designed by the architects Crouch and Wilson.',
+        'It is small, about 6 by 20 metres, and almost looks like a warehouse. Men met on the ground floor and women on the floor above. It has two fronts: one on Little Bourke Street and one on Heffernan Lane.',
+        'The congregation is now part of the Uniting Church. The building is on the Victorian Heritage Register as a very early example of polychrome brickwork in Victoria.',
+      ],
+      quote: 'Men downstairs, women upstairs: the plan of 1872.',
+      sources: [
+        { abbr: 'VHR', name: 'Victorian Heritage Register', desc: 'Chinese Mission Church (H2175)', url: 'https://vhd.heritagecouncil.vic.gov.au/places/4246' },
+        { abbr: 'GH', name: 'Gospel Hall Melbourne', desc: 'History of the congregation', url: 'https://www.ucghm.org.au/history' },
+      ],
+    },
+  },
+  7: {
+    line: '1921 · occupied by the Chinese Nationalist Club',
+    name: 'Kuomintang Building',
+    title: 'Kuomintang Building',
+    meta: '109 Little Bourke Street · re-faced 1921',
+    img: 'img/stop-7.jpg',
+    alt: 'Blue facade with a long Chinese sign above a bookshop sign',
+    quick: {
+      title: 'Canberra’s architect was here',
+      text: ['In 1921 Walter Burley Griffin, the architect who planned Canberra, gave this building a new front for the Chinese Nationalist Party, the Kuomintang.'],
+      find: 'Find the long sign in Chinese above the ground floor. Which organisation does it name?',
+      answer: 'The Kuomintang’s Victoria branch: 中國國民黨駐域多利支部.',
+    },
+    full: {
+      title: 'A new face in 1921',
+      text: [
+        'In about 1903 the architect Nahum Barnet designed a brick building on this site for the merchant C. H. Cheong.',
+        'In 1921 Walter Burley Griffin re-faced it for the Chinese Nationalist Club, covering the red brick with angular render and his crystal-like geometric ornament. The Kuomintang opened its Melbourne headquarters here on 26 December 1921.',
+        'Some of Griffin’s ornament has since been stripped away; a crystal-patterned grille between the piers was removed in the late 1970s. For Chinese people in Victoria, the Kuomintang was a key community organisation in a time of prejudice and isolation.',
+      ],
+      quote: 'Canberra’s architect gave Chinatown a crystal-cut face.',
+      sources: [
+        { abbr: 'VHD', name: 'Victorian Heritage Database', desc: 'Kuomintang Building', url: 'https://vhd.heritagecouncil.vic.gov.au/places/9444' },
+        { abbr: 'WBG', name: 'Walter Burley Griffin Society', desc: 'Kuomintang Club Building, 109 Little Bourke Street', url: 'https://www.griffinsociety.org/?p=2697' },
+        { abbr: 'CM', name: 'Chinese Museum', desc: '109 Little Bourke Street (opened 26 December 1921)', url: 'https://www.chia.chinesemuseum.com.au/biogs/CH00836b.htm' },
+      ],
+    },
+  },
+  8: {
+    line: 'By 1860 · rooms in a lane',
+    name: 'Celestial Avenue',
+    title: 'Celestial Avenue',
+    meta: 'Off Little Bourke Street · lodgings by 1860',
+    img: 'img/stop-8.jpg',
+    alt: 'Cobbled lane between brick buildings, with a Celestial Av street sign on the corner',
+    credit: 'Street View image © Google',
+    quick: {
+      title: 'The lane they called Celestial',
+      text: ['Some of Melbourne’s earliest Chinese lodgings were in this lane. By 1860 it held many Chinese boarding houses.'],
+      find: 'Find the street sign on the corner of the lane. What is it called?',
+      answer: 'Celestial Avenue, from “Celestials”, a 19th-century name for Chinese people.',
+    },
+    full: {
+      title: 'Rooms in a lane',
+      text: [
+        'The lane was first called Celestial Alley, and tradesmen lived here in the 1840s. By 1860 it held many Chinese boarding houses, among the earliest Chinese homes in the city.',
+        '“Celestial” was a common 19th-century word for Chinese people, often used as an insult. In 1892 a school for the street’s Chinese children was reached through a back entrance in the lane, and in 1894 the See Yup society built housing for Chinese residents at number 16.',
+        'Nearby, at 212–220 Little Bourke Street, Chinese people have occupied the site since 1862; the present shops date from 1883.',
+      ],
+      quote: 'By 1860, the lane was full of Chinese boarding houses.',
+      sources: [
+        { abbr: 'eM', name: 'eMelbourne', desc: 'Celestial Avenue', url: 'https://www.emelbourne.net.au/biogs/EM01733b.htm' },
+        { abbr: 'VHI', name: 'Victorian Heritage Inventory', desc: '16 Celestial Avenue', url: 'https://vhd.heritagecouncil.vic.gov.au/places/9221' },
+        { abbr: 'VHD', name: 'Victorian Heritage Database', desc: '214 Little Bourke Street', url: 'https://vhd.heritagecouncil.vic.gov.au/places/9236' },
+      ],
+    },
+  },
+};
