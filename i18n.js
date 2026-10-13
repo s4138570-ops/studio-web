@@ -114,6 +114,7 @@ window.I18N = {
   'Stop 7: Kuomintang Building': ['第 7 站:Kuomintang Building', '第 7 站:Kuomintang Building'],
   // aria labels
   'Back': ['返回', '返回'],
+  "Mid-Autumn event": ["中秋活动", "中秋活動"],
   // stamps (aria labels)
   "Stamp %n": ["第 %n 枚邮票章", "第 %n 枚郵票章"],
   "Stamp %n, coming soon": ["第 %n 枚邮票章,即将推出", "第 %n 枚郵票章,即將推出"],

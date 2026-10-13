@@ -19,6 +19,9 @@
 
 <div class="phone" id="app">
 
+  <!-- always-visible shortcut to the event page (hidden on the event page itself) -->
+  <div class="eventbar"><a class="eventbtn" id="eventbtn" href="#/11">Mid-Autumn event</a></div>
+
   <!-- 01 Stop entry (QR landing) -->
   <section class="screen" data-screen="1" data-title="Stop entry (QR landing)">
     <div class="langpick" role="group" aria-label="Language 语言 語言">
@@ -174,7 +177,7 @@
     <button class="btn primary" id="remind" data-k="Remind me">Remind me</button>
     <p class="eyebrow">ALSO ON TONIGHT</p>
     <a class="card item" href="#/12"><i data-slot="also-thumb" class="ph thumb"><img src="img/stamp-4.webp" alt=""></i><div><b>Collect the stamps</b><small>Along the walk</small></div></a>
-    <a class="back" href="#/3" aria-label="Back"></a>
+    <a class="back" id="s11-back" href="#/3" aria-label="Back"></a>
   </section>
 
   <!-- 12 Stamps & progress -->

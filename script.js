@@ -197,12 +197,16 @@ function markJump() {
 function updateTitle() {
   document.title = `${t(decode(current().dataset.title))} · Chinatown Walk Melbourne`;
 }
-function route() {
+function route(e) {
+  // the event page's back button returns to wherever the visitor came from
+  const prev = e && e.oldURL ? new URL(e.oldURL).hash : '';
+  if (current().dataset.screen === '11' && prev && !prev.startsWith('#/11')) $('s11-back').href = prev;
   const stop = Number(parseHash()[2]);
   if (STOPS[stop]) cur = stop;
   renderStop(cur);
   const target = current();
   screens.forEach((s) => s.classList.toggle('active', s === target));
+  $('eventbtn').hidden = target.dataset.screen === '11';
   markJump();
   updateTitle();
   phone.scrollTop = 0;
