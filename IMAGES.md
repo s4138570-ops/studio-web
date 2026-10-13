@@ -51,7 +51,6 @@ has no photo (all eight have photos now).
 
 ## Still to do
 
-- **AR (screen 08)**: waiting on the team. The "See it in AR" button shows on stop 3 only.
 - **Find it**: each challenge was written from the photos. Check on site that the thing is still there.
 - **Map pins**: positions are estimates from street numbers; move a pin by editing its `left`/`top` %
   in `index.html` (screen 09).

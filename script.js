@@ -132,7 +132,6 @@ function renderStop(n) {
   $('s6-src-list').textContent = [...new Set(sources.map((x) => x.name))].join(' · ');
   $('s6-src').href = `#/7/${n}`;
   $('s6-back').href = `#/1/${n}`;
-  $('s6-ar').hidden = n !== 3; // AR exists for stop 3 only so far
 
   // 07 sources (links open in a new tab; a print source has no link)
   $('s7-back').href = `#/6/${n}`;

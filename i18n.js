@@ -35,16 +35,10 @@ window.I18N = {
   // 06 full story
   '7 min': ['7 分钟', '7 分鐘'],
   'A European building wearing two identities': ['一座身兼两种身份的欧式建筑', '一座身兼兩種身份的歐式建築'],
-  'See it in AR': ['用 AR 查看', '用 AR 查看'],
   // 07 sources
   'Sources': ['资料来源', '資料來源'],
   'Every claim on the previous screen can be checked.': ['上一页的每一项说法都可以查证。', '上一頁的每一項說法都可以查證。'],
   'Opens in a new tab. We don’t track what you read.': ['将在新标签页打开。我们不会追踪你的阅读记录。', '將在新分頁開啟。我們不會追蹤你的閱讀紀錄。'],
-  // 08 AR
-  'POINT AT THE BRICKWORK': ['对准砖墙', '對準磚牆'],
-  'The ghost sign, restored': ['复原的“幽灵招牌”', '復原的「幽靈招牌」'],
-  'A painted advertisement from the 1890s, still faintly visible above the doorway.': ['一幅 1890 年代的彩绘广告,至今仍隐约可见于门口上方。', '一幅 1890 年代的彩繪廣告,至今仍隱約可見於門口上方。'],
-  'Camera runs on your device. Nothing is uploaded.': ['相机只在你的设备上运行,不会上传任何内容。', '相機只在你的裝置上運行,不會上傳任何內容。'],
   // 09 map
   'Nearest stop': ['最近的站点', '最近的站點'],
   '70 m · about 1 minute walk': ['70 米 · 步行约 1 分钟', '70 米 · 步行約 1 分鐘'],
@@ -93,7 +87,7 @@ window.I18N = {
   'STILL WORKS': ['仍可使用', '仍可使用'],
   'All 8 stops · text, images and audio were saved when you scanned the first marker.': ['全部 8 个站点 · 文字、图片和音频已在你扫描第一个标记时保存。', '全部 8 個站點 · 文字、圖片和音訊已在你掃描第一個標記時儲存。'],
   'NEEDS A CONNECTION': ['需要网络连接', '需要網路連線'],
-  'AR view · source links · sharing': ['AR 视图 · 来源链接 · 分享', 'AR 視圖 · 來源連結 · 分享'],
+  'Source links · sharing': ['来源链接 · 分享', '來源連結 · 分享'],
   'Keep walking': ['继续走', '繼續走'],
   'Try again': ['重试', '重試'],
   // screen titles (page title + screen index)
@@ -103,7 +97,6 @@ window.I18N = {
   'Depth choice': ['选择深度', '選擇深度'],
   'Stop — Quick Look': ['站点 — 速览', '站點 — 速覽'],
   'Stop — Full Story': ['站点 — 完整故事', '站點 — 完整故事'],
-  'AR view (Web AR)': ['AR 视图(网页 AR)', 'AR 視圖(網頁 AR)'],
   'Map': ['地图', '地圖'],
   'Tonight — projection': ['今晚 — 投影', '今晚 — 投影'],
   'Stamps & progress': ['印章与进度', '印章與進度'],
@@ -120,7 +113,7 @@ window.I18N = {
   'Stop 6: Chinese Mission Church': ['第 6 站:Chinese Mission Church', '第 6 站:Chinese Mission Church'],
   'Stop 7: Kuomintang Building': ['第 7 站:Kuomintang Building', '第 7 站:Kuomintang Building'],
   // aria labels
-  'Back': ['返回', '返回'], 'Capture': ['拍摄', '拍攝'], 'Close': ['关闭', '關閉'], 'Previous': ['上一个', '上一個'],
+  'Back': ['返回', '返回'],
   // stamps (aria labels)
   "Stamp %n": ["第 %n 枚邮票章", "第 %n 枚郵票章"],
   "Stamp %n, coming soon": ["第 %n 枚邮票章,即将推出", "第 %n 枚郵票章,即將推出"],
