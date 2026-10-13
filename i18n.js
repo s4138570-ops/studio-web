@@ -126,6 +126,8 @@ window.I18N = {
   'Stamps & progress': ['印章与进度', '印章與進度'],
   'Take home': ['带走行程', '帶走行程'],
   'Offline / weak signal': ['离线 / 信号弱', '離線 / 訊號弱'],
+  // image descriptions
+  'Poster: Explore Melbourne’s Chinatown Through Time. Mid-Autumn Moon Festival, September 25th, Little Bourke Street.': ['海报:探索墨尔本唐人街的时光。中秋节,9 月 25 日,Little Bourke Street。', '海報:探索墨爾本唐人街的時光。中秋節,9 月 25 日,Little Bourke Street。'],
   // aria labels
   'Back': ['返回', '返回'], 'Capture': ['拍摄', '拍攝'], 'Close': ['关闭', '關閉'], 'Previous': ['上一个', '上一個'],
 };

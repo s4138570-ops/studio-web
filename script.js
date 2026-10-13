@@ -33,6 +33,9 @@ while (walker.nextNode()) {
 const ariaEls = [...phone.querySelectorAll('[aria-label]')]
   .filter((el) => window.I18N[el.getAttribute('aria-label')])
   .map((el) => ({ el, en: el.getAttribute('aria-label') }));
+const altEls = [...phone.querySelectorAll('img[alt]')]
+  .filter((el) => window.I18N[el.getAttribute('alt')])
+  .map((el) => ({ el, en: el.getAttribute('alt') }));
 
 const renderDyn = (el) => { el.textContent = t(el.dataset.k, el.dataset.n); };
 function setDyn(el, key, n) { el.dataset.k = key; if (n != null) el.dataset.n = n; renderDyn(el); }
@@ -44,6 +47,7 @@ function setLang(l) {
   textNodes.forEach(({ n, lead, en, trail }) => { n.nodeValue = lead + t(en) + trail; });
   document.querySelectorAll('[data-k]').forEach(renderDyn);
   ariaEls.forEach(({ el, en }) => el.setAttribute('aria-label', t(en)));
+  altEls.forEach(({ el, en }) => { el.alt = t(en); });
   document.querySelectorAll('[data-set-lang]').forEach((a) => a.classList.toggle('on', a.dataset.setLang === l));
   buildJump();
   updateTitle();

@@ -48,6 +48,10 @@ p{margin:0}
   mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16px 8px repeat-x,linear-gradient(#000 0 0) top/100% calc(100% - 7px) no-repeat}
 .ph.icon:has(img){width:72px;height:72px}
 .ph.icon:has(img) img{border-radius:10px}
+/* event poster: shown whole, no crop, no torn edge */
+.ph.poster:not(.thumb):has(img){border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);overflow:hidden;-webkit-mask:none;mask:none}
+.ph.poster img{height:auto}
+.ph.thumb img[src$="promo.jpg"]{object-position:50% 45%}
 
 .urlbar{display:flex;align-items:center;gap:8px;background:var(--card);border:1.5px solid var(--ink);border-radius:999px;padding:10px 14px;font-size:11px;color:var(--muted)}
 .sq{width:12px;height:12px;border-radius:50%;background:var(--green);display:inline-block}
